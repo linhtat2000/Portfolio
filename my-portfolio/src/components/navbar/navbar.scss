@@ -1,0 +1,78 @@
+@import "../../global.scss";
+
+.navbar {
+  width: $navbar-width;
+  background-color: #f7f7ff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+    }
+
+    .name {
+      font-family: "Courgette", cursive;
+      font-size: 3.4rem;
+      margin: 0.15em 0;
+    }
+
+    .ocupation {
+      font-size: 1.3rem;
+      font-weight: 300;
+    }
+  }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px;
+
+    .link-item {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #000;
+      text-decoration: none;
+
+      &:hover {
+        color: $accent-clr;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+
+    .social-links {
+      display: flex;
+      justify-content: space-between;
+
+      .social-link {
+        font-size: 2rem;
+        margin-bottom: 0.6em;
+        color: #000;
+
+        &:hover {
+          color: $accent-clr;
+        }
+      }
+    }
+
+    .copyrights {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+}
