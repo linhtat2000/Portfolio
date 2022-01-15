@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .container {
   width: 250px;
   display: flex;
@@ -16,6 +18,8 @@
     }
 
     &:hover {
+      transition: $transition;
+
       img {
         opacity: 0.65;
       }
