@@ -1,18 +1,34 @@
 import React from "react";
+
+import PhoneIcon from "@mui/icons-material/Phone";
+import MailIcon from "@mui/icons-material/Mail";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+
+import Form from "../../components/form/Form";
+import contact from "../../assets/contact.png";
+
 import "./contactPage.scss";
 
 const ContactPage = () => {
   return (
-    <div className="main">
-      contact page
-      <br />
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
-      sapiente vitae magni expedita repellat nihil corrupti atque obcaecati
-      accusamus possimus saepe, enim, nulla perferendis rem quidem omnis
-      repellendus qui veritatis quo autem dolore impedit. Tenetur harum eligendi
-      repellat sequi, eius natus a, fugiat mollitia odio similique voluptatibus.
-      Quo atque, commodi vel vitae assumenda maiores cupiditate, laboriosam
-      distinctio modi pariatur explicabo!
+    <div className="main contact-section">
+      <img src={contact} alt="illustration" className="contact-img" />
+      <h2 className="header">Get in touch</h2>
+      <div className="information">
+        <div className="text">
+          <PhoneIcon className="icon" />
+          035-995-2085
+        </div>
+        <div className="text">
+          <MailIcon className="icon" />
+          linhtatfe@gmail.com
+        </div>
+        <div className="text">
+          <LocationOnIcon className="icon" />
+          Binh Tri Dong B, Binh Tan, Ho Chi Minh
+        </div>
+      </div>
+      <Form />
     </div>
   );
 };

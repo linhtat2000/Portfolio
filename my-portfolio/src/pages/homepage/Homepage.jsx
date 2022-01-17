@@ -12,7 +12,7 @@ import "../../global.scss";
 import "./homepage.scss";
 import ProjectPage from "../project-page/ProjectPage";
 import AboutPage from "../about-page/AboutPage";
-import ContactPage from "../about-page/AboutPage";
+import ContactPage from "../contact-page/ContactPage";
 
 const Homepage = () => {
   return (

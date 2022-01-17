@@ -15,10 +15,18 @@ const ProjectItem = () => {
         />
         <div className="buttons">
           <ThemeProvider theme={theme}>
-            <Button variant="contained" color="primary" className="button">
+            <Button
+              variant="contained"
+              color="primary"
+              className="custom-button"
+            >
               view demo
             </Button>
-            <Button variant="contained" color="primary" className="button">
+            <Button
+              variant="contained"
+              color="primary"
+              className="custom-button"
+            >
               view detail
             </Button>
           </ThemeProvider>

@@ -1,0 +1,17 @@
+.form {
+  background-color: #3437a1;
+  width: 450px;
+  height: 460px;
+  border-radius: 10px;
+  padding: 3em;
+
+  .input {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 2em;
+  }
+
+  .custom-btn {
+    float: right;
+  }
+}

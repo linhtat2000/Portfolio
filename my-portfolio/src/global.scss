@@ -2,17 +2,12 @@ $accent-clr: #5e63b6;
 
 $navbar-width: 300px;
 
-$transition: all 2s ease;
+$transition: all 0.8s ease;
 
 .main {
   margin-left: $navbar-width;
-  padding: 60px 60px;
+  padding: 6em 6em;
   height: 100vh;
-
-  .custom-btn {
-    min-width: 120px;
-    border-radius: 20px;
-  }
 
   .header {
     font-family: "Courgette", cursive;
@@ -28,5 +23,10 @@ $transition: all 2s ease;
 
   .bold-text {
     color: $accent-clr;
+  }
+
+  .custom-btn {
+    min-width: 120px;
+    border-radius: 20px;
   }
 }
