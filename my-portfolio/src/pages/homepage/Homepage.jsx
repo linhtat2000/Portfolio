@@ -7,7 +7,7 @@ import illustration1 from "../../assets/illustration-1.png";
 import illustration2 from "../../assets/illustration-2.png";
 import illustration3 from "../../assets/illustration-3.png";
 
-import theme from "../../components/button/theme";
+import theme from "../../theme-btn";
 import "../../global.scss";
 import "./homepage.scss";
 import ProjectPage from "../project-page/ProjectPage";
@@ -20,22 +20,23 @@ const Homepage = () => {
       <Navbar />
       <div className="main">
         <div className="hero-img">
-          <img src={illustration3} alt="hero background" />
+          <img src={illustration1} alt="hero background" />
         </div>
         <div className="theme-toggle">toggle</div>
         <div className="intro">
-          <h1 className="intro-header">
+          <h1 className="header">
             Hello World!
             <br />
             My name is Linh
           </h1>
-          <p>
-            I’m a fresher <strong>Frontend Developer</strong> based in Ho Chi
-            Minh City. My goal is to bring your ideas into life
+          <p className="text">
+            I’m a fresher{" "}
+            <strong className="bold-text">Frontend Developer</strong> based in
+            Ho Chi Minh City. My goal is to bring your ideas into life!
           </p>
         </div>
         <ThemeProvider theme={theme}>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" className="custom-btn">
             get in touch
           </Button>
         </ThemeProvider>

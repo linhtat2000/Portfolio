@@ -1,3 +1,17 @@
-.main {
-  scroll-snap-align: center;
+.project-section {
+  .introduction {
+    position: relative;
+    width: 951px;
+
+    .text {
+      width: 600px;
+      margin: 1em 0;
+    }
+
+    .custom-btn {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { ThemeProvider } from "@mui/material";
 import Button from "@mui/material/Button";
 
-import theme from "../../components/button/theme";
+import theme from "../../theme-btn";
 import "./projectItem.scss";
 
 const ProjectItem = () => {

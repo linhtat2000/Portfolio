@@ -6,6 +6,27 @@ $transition: all 2s ease;
 
 .main {
   margin-left: $navbar-width;
-  padding: 60px 36px;
+  padding: 60px 60px;
   height: 100vh;
+
+  .custom-btn {
+    min-width: 120px;
+    border-radius: 20px;
+  }
+
+  .header {
+    font-family: "Courgette", cursive;
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
+
+  .text {
+    font-size: 1.4rem;
+    line-height: 1.4em;
+    margin: 2em 0;
+  }
+
+  .bold-text {
+    color: $accent-clr;
+  }
 }

@@ -4,7 +4,9 @@ import "./projectList.scss";
 
 const ProjectList = () => {
   return (
-    <div>
+    <div className="list">
+      <ProjectItem />
+      <ProjectItem />
       <ProjectItem />
       <ProjectItem />
       <ProjectItem />

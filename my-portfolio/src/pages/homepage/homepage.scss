@@ -1,6 +1,9 @@
 @import "../../global.scss";
 
 .homepage {
+  scroll-snap-type: proximity;
+  scroll-snap-points-y: repeat(100vh);
+
   .hero-img {
     position: absolute;
     top: 8em;
@@ -15,21 +18,5 @@
   .intro {
     margin-top: 12em;
     max-width: 400px;
-
-    .intro-header {
-      font-family: "Courgette", cursive;
-      font-size: 2.4rem;
-      font-weight: 400;
-    }
-
-    p {
-      font-size: 1.4rem;
-      line-height: 1.4em;
-      margin: 2em 0;
-
-      strong {
-        color: $accent-clr;
-      }
-    }
   }
 }
