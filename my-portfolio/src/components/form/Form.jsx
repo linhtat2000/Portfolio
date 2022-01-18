@@ -1,33 +1,24 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import { Alert, AlertTitle, ThemeProvider } from "@mui/material";
+import {
+  Alert,
+  AlertTitle,
+  Collapse,
+  IconButton,
+  ThemeProvider,
+} from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import emailjs from "emailjs-com";
 
 import theme from "../../theme-btn";
 import "./form.scss";
-import { useState } from "react";
 
 const Form = () => {
-  const [isSucceed, setIsSucceed] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(null);
+  const [open, setOpen] = useState(true);
   const formRef = useRef();
-
-  const handleFeedback = (isSucceed) => {
-    isSucceed ? (
-      <Alert severity="success" className="feedback-msg">
-        <AlertTitle>Your message has been sent</AlertTitle>
-        I'll respone you as soon as possible :) Have a nice day!
-      </Alert>
-    ) : (
-      <Alert severity="error" className="feedback-msg">
-        <AlertTitle>Oops! Your message has not been sent :(</AlertTitle>
-        Please try again later! Or you can directly hit me up on the phone
-      </Alert>
-    );
-  };
-  // const action = setTimeout(handleFeedback(isSucceed), 2000);
-  // clearTimeout(action);
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
@@ -42,14 +33,55 @@ const Form = () => {
       .then(
         (response) => {
           console.log(response.status, response.text);
-          setIsSucceed(true);
+          setIsSuccess("success");
         },
         (error) => {
           console.log(error);
-          setIsSucceed(false);
+          setIsSuccess("error");
         }
       );
   };
+
+  const displayFeedback = () => {
+    switch (isSuccess) {
+      case "success":
+        return (
+          <Collapse in={open}>
+            <Alert
+              Alert
+              severity="success"
+              className="feedback-msg"
+              action={
+                <IconButton
+                  aria-label="close"
+                  color="inherit"
+                  size="small"
+                  onClick={() => {
+                    setOpen(false);
+                  }}
+                >
+                  <CloseIcon />
+                </IconButton>
+              }
+            >
+              <AlertTitle>Your message has been sent</AlertTitle>
+              I'll respone you as soon as possible :) Have a nice day!
+            </Alert>
+          </Collapse>
+        );
+      case "error":
+        return (
+          <Alert severity="error" className="feedback-msg">
+            <AlertTitle>Oops! Your message has not been sent </AlertTitle>
+            Please try again later! Or you can directly hit me up on the phone
+          </Alert>
+        );
+      default:
+        return null;
+    }
+  };
+  // const hide = setTimeout(hide, 2000);
+  // clearTimeout(action);
 
   return (
     <ThemeProvider theme={theme}>
@@ -118,8 +150,8 @@ const Form = () => {
         >
           send message
         </Button>
+        {displayFeedback()}
       </form>
-      ;
     </ThemeProvider>
   );
 };
