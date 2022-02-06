@@ -25,12 +25,12 @@ const Navbar = () => {
         <Link to="/project" className="link-item">
           My Project
         </Link>
-        <Link to="/aboutme" className="link-item">
+        <Link to="/about-me" className="link-item">
           About Me
         </Link>
-        <a href="#contact" className="link-item">
+        <Link to="/contact-me" className="link-item">
           Contact Me
-        </a>
+        </Link>
       </div>
       <div className="bottom">
         <div className="social-links">

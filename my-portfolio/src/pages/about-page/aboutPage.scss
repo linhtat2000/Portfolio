@@ -1,0 +1,30 @@
+.about-section {
+  .info {
+    display: flex;
+
+    .left {
+      flex: 2;
+      max-width: 520px;
+
+      .text {
+        line-height: 1.6em;
+      }
+    }
+
+    .right {
+      flex: 1;
+      margin-left: 14em;
+
+      .portrait {
+        // width: 65%;
+        width: 350px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .about-btns {
+    display: flex;
+    justify-content: space-around;
+  }
+}

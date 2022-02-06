@@ -13,11 +13,11 @@ import "./homepage.scss";
 import ProjectPage from "../project-page/ProjectPage";
 import AboutPage from "../about-page/AboutPage";
 import ContactPage from "../contact-page/ContactPage";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
     <div className="homepage">
-      <Navbar />
       <div className="main">
         <div className="hero-img">
           <img src={illustration1} alt="hero background" />
@@ -36,9 +36,11 @@ const Homepage = () => {
           </p>
         </div>
         <ThemeProvider theme={theme}>
-          <Button variant="contained" color="primary" className="custom-btn">
-            get in touch
-          </Button>
+          <Link to="/contact-me" className="link-item">
+            <Button variant="contained" color="primary" className="custom-btn">
+              get in touch
+            </Button>
+          </Link>
         </ThemeProvider>
       </div>
 

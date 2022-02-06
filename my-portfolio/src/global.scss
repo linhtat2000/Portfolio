@@ -27,6 +27,11 @@ $transition: all 0.8s ease;
 
   .custom-btn {
     min-width: 120px;
+    max-width: 140px;
     border-radius: 20px;
   }
+}
+
+a {
+  text-decoration: none;
 }
