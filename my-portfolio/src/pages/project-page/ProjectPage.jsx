@@ -15,7 +15,7 @@ const ProjectPage = () => {
         <h2 className="header">My Project</h2>
         <p className="text">
           Here are some of my recent work. They are personal project to showcase
-          my skill
+          my skill.
         </p>
         <ThemeProvider theme={theme}>
           <Button variant="contained" color="primary" className="custom-btn">

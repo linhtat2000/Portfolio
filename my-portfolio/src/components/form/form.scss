@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 #contact-form {
   background-color: #3437a1;
   width: 450px;
@@ -14,6 +16,11 @@
   .custom-btn {
     margin-top: 0.2em;
     float: right;
+  }
+
+  @include mobile {
+    width: 300px;
+    margin: 0 auto;
   }
 }
 

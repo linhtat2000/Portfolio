@@ -1,12 +1,18 @@
 @import "../../global.scss";
 
 .homepage {
-  scroll-snap-type: y proximity;
+  overflow-x: hidden;
 
   .hero-img {
     position: absolute;
-    top: 8em;
-    right: 4.5em;
+    bottom: 4em;
+    right: 5em;
+    width: 800px;
+    z-index: -1;
+
+    img {
+      width: 90%;
+    }
   }
 
   .theme-toggle {
@@ -17,5 +23,37 @@
   .intro {
     margin-top: 12em;
     max-width: 400px;
+  }
+
+  @include tablet {
+    .hero-img {
+      width: 600px;
+      bottom: 2em;
+
+      img {
+        width: 95%;
+        margin-left: 4em;
+      }
+    }
+  }
+
+  @include mobile {
+    .main {
+      margin-left: 0;
+    }
+
+    .intro {
+      margin-top: 4em;
+    }
+
+    .hero-img {
+      width: 300px;
+      bottom: 12em;
+
+      img {
+        width: 95%;
+        margin-left: 4em;
+      }
+    }
   }
 }

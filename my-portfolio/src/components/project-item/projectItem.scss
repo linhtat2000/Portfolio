@@ -65,6 +65,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        z-index: 1;
       }
 
       .view-project {
@@ -97,5 +98,13 @@
     font-weight: 600;
     margin: 0.65em 0 1em;
     align-self: center;
+  }
+
+  @include tablet {
+    margin: 4em auto -3em;
+  }
+
+  @include mobile {
+    margin: 5em auto -4em;
   }
 }

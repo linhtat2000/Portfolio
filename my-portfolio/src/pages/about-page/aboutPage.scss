@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .about-section {
   .info {
     display: flex;
@@ -5,10 +7,6 @@
     .left {
       flex: 2;
       max-width: 500px;
-
-      .text {
-        line-height: 1.5em;
-      }
 
       .download-file {
         color: #fff;
@@ -26,9 +24,41 @@
       margin-left: 14em;
 
       .portrait {
-        // width: 65%;
         width: 350px;
-        border-radius: 8px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  @include tablet {
+    &.main {
+      height: unset;
+    }
+
+    .info {
+      .right {
+        .portrait {
+          margin: 4em 0;
+          width: 240px;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    height: unset;
+    margin-bottom: 6em;
+
+    .info {
+      flex-direction: column;
+
+      .right {
+        margin: 0 auto;
+
+        .portrait {
+          margin: 4em 0;
+          width: 200px;
+        }
       }
     }
   }

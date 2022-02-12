@@ -4,7 +4,7 @@ import { ThemeProvider } from "@mui/material";
 import Button from "@mui/material/Button";
 
 import illustration1 from "../../assets/illustration-1.png";
-import illustration2 from "../../assets/illustration-2.png";
+import illustration2 from "../../assets/Illustration-2.svg";
 import illustration3 from "../../assets/illustration-3.png";
 
 import theme from "../../theme-btn";

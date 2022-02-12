@@ -21,8 +21,9 @@ const AboutPage = () => {
             Developer.
           </p>
           <p className="text">
-            Currently, I’m available for hiring that I’ll be delighted to hear
-            from you.
+            Currently,{" "}
+            <strong className="bold-text">I’m available for hiring</strong> that
+            I’ll be delighted to hear from you.
           </p>
           <ThemeProvider theme={theme}>
             <Button variant="contained" color="primary" className="custom-btn">

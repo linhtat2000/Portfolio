@@ -17,9 +17,6 @@
     flex-direction: column;
     align-items: center;
 
-    .logo {
-    }
-
     .name {
       font-family: "Courgette", cursive;
       font-size: 3.4rem;
@@ -74,5 +71,9 @@
       font-size: 1rem;
       font-weight: 500;
     }
+  }
+
+  @include mobile {
+    display: none;
   }
 }

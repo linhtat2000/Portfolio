@@ -1,17 +1,38 @@
+@import "../../global.scss";
+
 .project-section {
   .introduction {
-    position: relative;
-    width: 951px;
-
     .text {
-      width: 600px;
       margin: 1.2em 0;
     }
+  }
 
-    .custom-btn {
-      position: absolute;
-      right: 0;
-      bottom: 0;
+  @include tablet {
+    &.main {
+      height: unset;
+    }
+
+    .introduction {
+      width: 100%;
+
+      .text {
+        width: 100%;
+      }
+    }
+  }
+
+  @include mobile {
+    &.main {
+      height: unset;
+    }
+
+    .introduction {
+      width: 100%;
+
+      .text {
+        width: 100%;
+        margin: 1.1em 0;
+      }
     }
   }
 }

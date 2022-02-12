@@ -12,9 +12,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="top">
-        <div className="logo">
-          <img src={logo} alt="logo" />
-        </div>
+        <img src={logo} alt="logo" className="logo" />
         <div className="name">Linh Tat</div>
         <div className="ocupation">Frontend Developer</div>
       </div>

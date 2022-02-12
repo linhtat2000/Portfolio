@@ -2,8 +2,8 @@ import React from "react";
 
 import SensorsIcon from "@mui/icons-material/Sensors";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import "./projectItem.scss";
 import Technology from "../technology/Technology";
+import "./projectItem.scss";
 
 const ProjectItem = () => {
   return (
