@@ -19,7 +19,7 @@ const ProjectPage = () => {
         </p>
         <ThemeProvider theme={theme}>
           <Button variant="contained" color="primary" className="custom-btn">
-            see more
+            See More
           </Button>
         </ThemeProvider>
       </div>

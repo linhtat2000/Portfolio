@@ -148,7 +148,7 @@ const Form = () => {
           className="custom-btn"
           type="submit"
         >
-          send message
+          Send Message
         </Button>
         {displayFeedback()}
       </form>

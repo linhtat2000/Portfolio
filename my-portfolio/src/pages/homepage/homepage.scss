@@ -1,13 +1,12 @@
 @import "../../global.scss";
 
 .homepage {
-  scroll-snap-type: proximity;
-  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y proximity;
 
   .hero-img {
     position: absolute;
     top: 8em;
-    right: 2.5em;
+    right: 4.5em;
   }
 
   .theme-toggle {

@@ -1,9 +1,9 @@
 import React from "react";
-import { ThemeProvider } from "@mui/material";
-import Button from "@mui/material/Button";
 
-import theme from "../../theme-btn";
+import SensorsIcon from "@mui/icons-material/Sensors";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import "./projectItem.scss";
+import Technology from "../technology/Technology";
 
 const ProjectItem = () => {
   return (
@@ -13,23 +13,14 @@ const ProjectItem = () => {
           src="https://4.bp.blogspot.com/-5prgkINShq8/XwOeaSvk-ZI/AAAAAAAACP0/OrDecE6xQ5AG1acwoURcjIcgGFdwj7x1ACLcBGAsYHQ/w640-h427/web-design-landing-page-template_52683-18357.jpg"
           alt="project's thumbnail"
         />
-        <div className="buttons">
-          <ThemeProvider theme={theme}>
-            <Button
-              variant="contained"
-              color="primary"
-              className="custom-button"
-            >
-              view demo
-            </Button>
-            <Button
-              variant="contained"
-              color="primary"
-              className="custom-button"
-            >
-              view detail
-            </Button>
-          </ThemeProvider>
+        <div className="technique">
+          <Technology />
+          <Technology />
+          <Technology />
+        </div>
+        <div className="view-project">
+          <SensorsIcon className="view-icon" />
+          <GitHubIcon className="view-icon" />
         </div>
       </div>
       <div className="title">Project #01</div>

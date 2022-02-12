@@ -13,7 +13,7 @@ const ContactPage = () => {
   return (
     <div className="main contact-section" id="contact">
       <img src={contact} alt="illustration" className="contact-img" />
-      <h2 className="header">Get in touch</h2>
+      <h2 className="header">Get In Touch</h2>
       <div className="information">
         <div className="text">
           <PhoneIcon className="icon" />

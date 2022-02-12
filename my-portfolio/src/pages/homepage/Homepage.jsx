@@ -20,7 +20,7 @@ const Homepage = () => {
     <div className="homepage">
       <div className="main">
         <div className="hero-img">
-          <img src={illustration1} alt="hero background" />
+          <img src={illustration2} alt="hero background" />
         </div>
         <div className="theme-toggle">toggle</div>
         <div className="intro">
@@ -38,14 +38,14 @@ const Homepage = () => {
         <ThemeProvider theme={theme}>
           <Link to="/contact-me" className="link-item">
             <Button variant="contained" color="primary" className="custom-btn">
-              get in touch
+              Get In Touch
             </Button>
           </Link>
         </ThemeProvider>
       </div>
 
-      <ProjectPage />
       <AboutPage />
+      <ProjectPage />
       <ContactPage />
     </div>
   );

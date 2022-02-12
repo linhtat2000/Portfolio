@@ -1,8 +1,10 @@
 import { ThemeProvider } from "@emotion/react";
 import React from "react";
 
+import { Link } from "react-router-dom";
 import theme from "../../theme-btn";
 import { Button } from "@mui/material";
+import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import portrait from "../../assets/portrait.JPG";
 import "./aboutPage.scss";
 
@@ -22,24 +24,19 @@ const AboutPage = () => {
             Currently, I’m available for hiring that I’ll be delighted to hear
             from you.
           </p>
-          <div className="about-btns">
-            <ThemeProvider theme={theme}>
-              <Button
-                variant="contained"
-                color="primary"
-                className="custom-btn"
+          <ThemeProvider theme={theme}>
+            <Button variant="contained" color="primary" className="custom-btn">
+              <Link
+                to="../../../public/files/Tat-Tieu-Linh-Resume.pdf"
+                target="_blank"
+                download
+                className="download-file"
               >
-                download resume
-              </Button>
-              <Button
-                variant="contained"
-                color="primary"
-                className="custom-btn"
-              >
-                more about me
-              </Button>
-            </ThemeProvider>
-          </div>
+                <FileDownloadIcon className="download-icon" />
+                Resume
+              </Link>
+            </Button>
+          </ThemeProvider>
         </div>
         <div className="right">
           <img src={portrait} alt="Linh's portrait" className="portrait" />
