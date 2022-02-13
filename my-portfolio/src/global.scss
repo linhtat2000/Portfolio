@@ -2,18 +2,18 @@ $accent-clr: #5e63b6;
 
 $navbar-width: 300px;
 $mobile-width: 320px;
-$tablet-width: 920px;
+$tablet-width: 1280px;
 
 $transition: all 0.8s ease;
 
 @mixin mobile {
-  @media (min-width: #{$mobile-width}) and ( max-width: #{$tablet-width}) {
+  @media (min-width: #{$mobile-width}) and ( max-width: 768px) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: #{$tablet-width}) and ( max-width: 1200px) {
+  @media (min-width: 768px) and ( max-width: #{$tablet-width}) {
     @content;
   }
 }
