@@ -12,7 +12,7 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 import emailjs from "emailjs-com";
 
-import theme from "../../theme-btn";
+import btnTheme from "../../btn-theme";
 import "./form.scss";
 
 const Form = () => {
@@ -84,7 +84,7 @@ const Form = () => {
   // clearTimeout(action);
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={btnTheme}>
       <form id="contact-form" ref={formRef} onSubmit={handleSubmitForm}>
         <TextField
           fullWidth

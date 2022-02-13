@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import { ThemeProvider } from "@mui/material";
 
 import ProjectList from "../../components/project-list/ProjectList";
-import theme from "../../theme-btn";
+import btnTheme from "../../btn-theme";
 
 import "./projectPage.scss";
 import "../../global.scss";
@@ -17,7 +17,7 @@ const ProjectPage = () => {
           Here are some of my recent work. They are personal project to showcase
           my skill.
         </p>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={btnTheme}>
           <Button variant="contained" color="primary" className="custom-btn">
             See More
           </Button>

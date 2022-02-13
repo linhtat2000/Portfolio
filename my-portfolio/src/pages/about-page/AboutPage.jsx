@@ -2,7 +2,7 @@ import { ThemeProvider } from "@emotion/react";
 import React from "react";
 
 import { Link } from "react-router-dom";
-import theme from "../../theme-btn";
+import btnTheme from "../../btn-theme";
 import { Button } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import portrait from "../../assets/portrait.JPG";
@@ -25,7 +25,7 @@ const AboutPage = () => {
             <strong className="bold-text">I’m available for hiring</strong> that
             I’ll be delighted to hear from you.
           </p>
-          <ThemeProvider theme={theme}>
+          <ThemeProvider theme={btnTheme}>
             <Button variant="contained" color="primary" className="custom-btn">
               <Link
                 to="../../../public/files/Tat-Tieu-Linh-Resume.pdf"
