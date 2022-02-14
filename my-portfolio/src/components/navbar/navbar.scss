@@ -46,6 +46,16 @@
         text-decoration: underline;
       }
     }
+
+    &.dark-theme {
+      .link-item {
+        color: #f1f5f8;
+
+        &:hover {
+          color: $secondary-clr;
+        }
+      }
+    }
   }
 
   .bottom {
@@ -63,6 +73,16 @@
 
         &:hover {
           color: $accent-clr;
+        }
+      }
+
+      &.dark-theme {
+        .social-link {
+          color: #f1f5f8;
+
+          &:hover {
+            color: $secondary-clr;
+          }
         }
       }
     }

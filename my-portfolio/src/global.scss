@@ -1,4 +1,5 @@
-$accent-clr: #5e63b6;
+$accent-clr: #7868e6;
+$secondary-clr: #b5f4ff;
 
 $navbar-width: 300px;
 $mobile-width: 320px;
@@ -27,12 +28,14 @@ $transition: all 0.6s ease;
     font-family: "Courgette", cursive;
     font-size: 2.6rem;
     font-weight: 400;
+    z-index: 1;
   }
 
   .text {
     font-size: 1.4rem;
     line-height: 1.5em;
     margin: 2em 0;
+    z-index: 1;
 
     @include mobile {
       font-size: 1.2rem;

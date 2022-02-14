@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "@mui/material";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 
 import illustration1 from "../../assets/illustration-1.png";
-import illustration2 from "../../assets/Illustration-2.svg";
+import illustration2 from "../../assets/illustration-2.png";
 import illustration3 from "../../assets/illustration-3.png";
 
 import btnTheme from "../../btn-theme";
@@ -14,35 +13,18 @@ import ProjectPage from "../project-page/ProjectPage";
 import AboutPage from "../about-page/AboutPage";
 import ContactPage from "../contact-page/ContactPage";
 
+import ThemeToggle from "../../components/theme-toggle/ThemeToggle";
 import "../../global.scss";
 import "./homepage.scss";
-import ThemeToggle from "../../components/theme-toggle/ThemeToggle";
 
-const Homepage = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-
-  const toggleTheme = () => {
-    if (theme === "light") {
-      localStorage.setItem("theme", "dark");
-      console.log("Dark theme");
-      setTheme("dark");
-    } else {
-      localStorage.setItem("theme", "light");
-      console.log("light theme");
-      setTheme("light");
-    }
-  };
-
-  useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme");
-    localTheme && setTheme(localTheme);
-  }, []);
-
+const Homepage = ({ theme, toggleTheme }) => {
   return (
     <>
-      <div className="homepage">
+      <div
+        className="homepage"
+        style={theme === "light" ? lightTheme : darkTheme}
+      >
         <div className="main">
-          {/* <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}> */}
           <div className="hero-img">
             <img src={illustration2} alt="hero background" />
           </div>
@@ -57,16 +39,21 @@ const Homepage = () => {
             </h1>
             <p className="text">
               I’m a fresher{" "}
-              <strong className="bold-text">Frontend Developer</strong> based in
-              Ho Chi Minh City. My goal is to bring your ideas into life!
+              <strong
+                className="bold-text"
+                style={{ color: theme === "light" ? null : "#b5f4ff" }}
+              >
+                Frontend Developer
+              </strong>{" "}
+              based in Ho Chi Minh City. My goal is to bring your ideas into
+              life!
             </p>
           </div>
-          {/* </ThemeProvider> */}
           <ThemeProvider theme={btnTheme}>
             <Link to="/contact-me" className="link-item">
               <Button
                 variant="contained"
-                color="primary"
+                color={theme === "light" ? "primary" : "secondary"}
                 className="custom-btn"
               >
                 Get In Touch
@@ -75,9 +62,9 @@ const Homepage = () => {
           </ThemeProvider>
         </div>
 
-        <AboutPage />
-        <ProjectPage />
-        <ContactPage />
+        <AboutPage theme={theme} />
+        <ProjectPage theme={theme} />
+        <ContactPage theme={theme} />
       </div>
     </>
   );

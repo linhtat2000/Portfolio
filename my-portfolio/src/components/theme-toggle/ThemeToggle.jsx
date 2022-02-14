@@ -3,16 +3,17 @@ import React from "react";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 
+import { toggleDarkTheme, toggleBtnDarkTheme } from "../../theme";
 import "./themeToggle.scss";
 
 const ThemeToggle = ({ theme }) => {
   return (
-    <div className="toggle">
+    <div className="toggle" style={theme === "light" ? null : toggleDarkTheme}>
       <LightModeIcon className="toggle-icon" />
       <DarkModeIcon className="toggle-icon" />
       <div
         className="toggle-button"
-        style={{ left: theme === "light" ? 0.15 + "em" : 3 + "em" }}
+        style={theme === "light" ? null : toggleBtnDarkTheme}
       ></div>
     </div>
   );

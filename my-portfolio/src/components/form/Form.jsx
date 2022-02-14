@@ -15,7 +15,7 @@ import emailjs from "emailjs-com";
 import btnTheme from "../../btn-theme";
 import "./form.scss";
 
-const Form = () => {
+const Form = ({ theme }) => {
   const [isSuccess, setIsSuccess] = useState(null);
   const [open, setOpen] = useState(true);
   const formRef = useRef();
@@ -85,7 +85,12 @@ const Form = () => {
 
   return (
     <ThemeProvider theme={btnTheme}>
-      <form id="contact-form" ref={formRef} onSubmit={handleSubmitForm}>
+      <form
+        id="contact-form"
+        ref={formRef}
+        onSubmit={handleSubmitForm}
+        style={{ backgroundColor: theme === "light" ? null : "#004E79" }}
+      >
         <TextField
           fullWidth
           id="name-input"
@@ -144,7 +149,7 @@ const Form = () => {
         />
         <Button
           variant="contained"
-          color="primary"
+          color={theme === "light" ? "primary" : "secondary"}
           className="custom-btn"
           type="submit"
         >
