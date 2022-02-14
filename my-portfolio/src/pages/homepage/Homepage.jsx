@@ -22,7 +22,6 @@ const Homepage = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   const toggleTheme = () => {
-    // theme === "light" ? setTheme("light") : setTheme("dark");
     if (theme === "light") {
       localStorage.setItem("theme", "dark");
       console.log("Dark theme");
@@ -48,7 +47,7 @@ const Homepage = () => {
             <img src={illustration2} alt="hero background" />
           </div>
           <div className="theme-toggle" onClick={toggleTheme}>
-            <ThemeToggle />
+            <ThemeToggle theme={theme} />
           </div>
           <div className="intro">
             <h1 className="header">

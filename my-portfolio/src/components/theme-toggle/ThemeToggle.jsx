@@ -1,35 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 
-import ToggleButton from "@mui/material/ToggleButton";
-import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 import "./themeToggle.scss";
 
-const ThemeToggle = () => {
-  const [toggle, setToggle] = useState("sun");
-
-  const handleToggle = (e, toggle) => {
-    setToggle(toggle);
-  };
-
+const ThemeToggle = ({ theme }) => {
   return (
-    <ToggleButtonGroup
-      value={toggle}
-      size="small"
-      exclusive
-      onChange={handleToggle}
-      aria-label="light/dark theme"
-      className="toggle-btn"
-    >
-      <ToggleButton value="sun" aria-label="light theme">
-        <LightModeIcon />
-      </ToggleButton>
-      <ToggleButton value="moon" aria-label="dark theme">
-        <DarkModeIcon />
-      </ToggleButton>
-    </ToggleButtonGroup>
+    <div className="toggle">
+      <LightModeIcon className="toggle-icon" />
+      <DarkModeIcon className="toggle-icon" />
+      <div
+        className="toggle-button"
+        style={{ left: theme === "light" ? 0.15 + "em" : 3 + "em" }}
+      ></div>
+    </div>
   );
 };
 

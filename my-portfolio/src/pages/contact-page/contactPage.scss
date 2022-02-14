@@ -24,15 +24,13 @@
   }
 
   @include tablet {
-    height: unset;
-
     .contact-img {
       display: none;
     }
   }
 
   @include mobile {
-    height: unset;
+    margin-left: unset !important;
 
     .contact-img {
       display: none;

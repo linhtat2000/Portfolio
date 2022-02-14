@@ -11,7 +11,7 @@ import "./contactPage.scss";
 
 const ContactPage = () => {
   return (
-    <div className="main contact-section" id="contact">
+    <div className="main contact-section">
       <img src={contact} alt="illustration" className="contact-img" />
       <h2 className="header">Get In Touch</h2>
       <div className="information">

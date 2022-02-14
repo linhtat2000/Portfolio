@@ -1,3 +1,32 @@
-.toggle-btn {
+@import "../../global.scss";
+
+.toggle {
+  width: 60px;
+  height: 30px;
   border-radius: 20px;
+  border: 2px solid $accent-clr;
+  background-color: #f7f7ff;
+  position: relative;
+  top: 1.5em;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.toggle-icon {
+  color: #eb9b00;
+}
+
+.toggle-button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: $accent-clr;
+  position: absolute;
+  left: 0.15em;
+  // left: 3em;
+  cursor: pointer;
+  transition: $transition;
 }
