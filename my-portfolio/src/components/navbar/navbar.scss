@@ -11,6 +11,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  z-index: 1;
 
   .top {
     display: flex;
@@ -94,6 +95,37 @@
   }
 
   @include mobile {
-    display: none;
+    width: 100%;
+
+    &.close {
+      display: none;
+    }
+  }
+}
+
+.mobile-nav {
+  position: fixed;
+  right: 0.4em;
+  top: 0.6em;
+  font-size: 3.6rem !important;
+  color: $accent-clr;
+  cursor: pointer;
+  z-index: 2;
+  display: none !important;
+
+  &:hover {
+    color: #5448a1;
+  }
+
+  &.dark-theme {
+    color: $secondary-clr;
+
+    &:hover {
+      color: #7eaab2;
+    }
+  }
+
+  @include mobile {
+    display: block !important;
   }
 }
