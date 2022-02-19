@@ -5,6 +5,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import MenuIcon from "@mui/icons-material/Menu";
+import Iconify from "@iconify/react";
 
 import { useState } from "react";
 
@@ -53,11 +54,14 @@ const Navbar = ({ theme }) => {
             }
           >
             <a
-              href="https://www.instagram.com/todayis_meow/"
+              href="https://replit.com/@linhtat2000"
               target="_blank"
               rel="noreferrer"
             >
-              <InstagramIcon className="social-link" />
+              <span
+                class="iconify social-link"
+                data-icon="simple-icons:replit"
+              />
             </a>
             <a
               href="https://www.linkedin.com/in/linh-tat-612b62225/"
@@ -66,8 +70,12 @@ const Navbar = ({ theme }) => {
             >
               <LinkedInIcon className="social-link" />
             </a>
-            <a href="facebook.com" target="_blank" rel="noreferrer">
-              <FacebookIcon className="social-link" />
+            <a
+              href="https://app.netlify.com/teams/xiaoling2000/overview"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="iconify social-link" data-icon="bxl:netlify"></span>
             </a>
             <a
               href="https://github.com/linhtat2000"

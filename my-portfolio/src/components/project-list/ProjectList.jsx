@@ -11,7 +11,8 @@ const ProjectList = () => {
           <ProjectItem
             key={project.id}
             img={project.img}
-            link={project.link}
+            demo={project.demo}
+            git={project.git}
             name={project.name}
             tech={project.technology}
           />

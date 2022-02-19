@@ -5,7 +5,7 @@ import Technology from "../technology/Technology";
 import "./projectItem.scss";
 import { requirePropFactory } from "@mui/material";
 
-const ProjectItem = ({ img, link, name, tech }) => {
+const ProjectItem = ({ img, demo, git, name, tech }) => {
   return (
     <div className="container">
       <div className="thumbnail">
@@ -19,8 +19,12 @@ const ProjectItem = ({ img, link, name, tech }) => {
           })}
         </div>
         <div className="view-project">
-          <SensorsIcon className="view-icon" />
-          <GitHubIcon className="view-icon" />
+          <a href={demo} target="_blank" rel="noreferrer">
+            <SensorsIcon className="view-icon" />
+          </a>
+          <a href={git} target="_blank" rel="noreferrer">
+            <GitHubIcon className="view-icon" />
+          </a>
         </div>
       </div>
       <div className="title">{name}</div>
