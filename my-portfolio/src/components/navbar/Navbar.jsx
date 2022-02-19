@@ -1,13 +1,9 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import MenuIcon from "@mui/icons-material/Menu";
-import Iconify from "@iconify/react";
-
-import { useState } from "react";
 
 import logoLt from "../../assets/img/logo-lt.svg";
 import logoDt from "../../assets/img/logo-dt.svg";

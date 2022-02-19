@@ -1,6 +1,5 @@
 import { ThemeProvider } from "@mui/material";
 import { Link } from "react-router-dom";
-import Button from "@mui/material/Button";
 
 import illustration1 from "../../assets/img/illustration-1.png";
 import illustration2 from "../../assets/img/illustration-2.png";
@@ -9,11 +8,12 @@ import illustration3 from "../../assets/img/illustration-3.png";
 import btnTheme from "../../btn-theme";
 import { lightTheme, darkTheme } from "../../theme";
 
+import Button from "@mui/material/Button";
 import ProjectPage from "../project-page/ProjectPage";
 import AboutPage from "../about-page/AboutPage";
 import ContactPage from "../contact-page/ContactPage";
-
 import ThemeToggle from "../../components/theme-toggle/ThemeToggle";
+
 import "../../global.scss";
 import "./homepage.scss";
 

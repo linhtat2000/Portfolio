@@ -3,7 +3,6 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Technology from "../technology/Technology";
 
 import "./projectItem.scss";
-import { requirePropFactory } from "@mui/material";
 
 const ProjectItem = ({ img, demo, git, name, tech }) => {
   return (

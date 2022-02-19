@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -80,8 +80,6 @@ const Form = ({ theme }) => {
         return null;
     }
   };
-  // const hide = setTimeout(hide, 2000);
-  // clearTimeout(action);
 
   return (
     <ThemeProvider theme={btnTheme}>
