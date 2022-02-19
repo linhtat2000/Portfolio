@@ -1,16 +1,22 @@
-import React from "react";
 import ProjectItem from "../project-item/ProjectItem";
+import projects from "../../projects-data";
+
 import "./projectList.scss";
 
 const ProjectList = () => {
   return (
     <div className="list">
-      <ProjectItem />
-      <ProjectItem />
-      <ProjectItem />
-      <ProjectItem />
-      <ProjectItem />
-      <ProjectItem />
+      {projects.map((project) => {
+        return (
+          <ProjectItem
+            key={project.id}
+            img={project.img}
+            link={project.link}
+            name={project.name}
+            tech={project.technology}
+          />
+        );
+      })}
     </div>
   );
 };

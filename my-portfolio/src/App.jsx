@@ -14,11 +14,9 @@ function App() {
   const toggleTheme = () => {
     if (theme === "light") {
       localStorage.setItem("theme", "dark");
-      console.log("Dark theme");
       setTheme("dark");
     } else {
       localStorage.setItem("theme", "light");
-      console.log("light theme");
       setTheme("light");
     }
   };
@@ -36,9 +34,9 @@ function App() {
           path="/"
           element={<Homepage theme={theme} toggleTheme={toggleTheme} />}
         />
-        <Route path="/project" element={<ProjectPage />} />
-        <Route path="/about-me" element={<AboutPage />} />
-        <Route path="/contact-me" element={<ContactPage />} />
+        <Route path="/project" element={<ProjectPage theme={theme} />} />
+        <Route path="/about-me" element={<AboutPage theme={theme} />} />
+        <Route path="/contact-me" element={<ContactPage theme={theme} />} />
         <Route path="/project-detail/:id" element={<ProjectDetail />} />
       </Routes>
     </div>

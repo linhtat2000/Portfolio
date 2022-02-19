@@ -3,7 +3,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 import Form from "../../components/form/Form";
-import contact from "../../assets/contact.png";
+import contact from "../../assets/img/contact.png";
 
 import { darkTheme, lightTheme } from "../../theme";
 import "./contactPage.scss";

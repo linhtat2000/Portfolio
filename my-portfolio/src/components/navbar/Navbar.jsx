@@ -8,8 +8,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 import { useState } from "react";
 
-import logoLt from "../../assets/logo-lt.svg";
-import logoDt from "../../assets/logo-dt.svg";
+import logoLt from "../../assets/img/logo-lt.svg";
+import logoDt from "../../assets/img/logo-dt.svg";
 import { navbarDarkTheme } from "../../theme";
 
 import "./navbar.scss";
@@ -70,7 +70,7 @@ const Navbar = ({ theme }) => {
               <FacebookIcon className="social-link" />
             </a>
             <a
-              href="https://github.com/xiaoling2000"
+              href="https://github.com/linhtat2000"
               target="_blank"
               rel="noreferrer"
             >

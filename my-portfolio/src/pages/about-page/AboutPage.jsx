@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 
 import btnTheme from "../../btn-theme";
-import portrait from "../../assets/portrait.JPG";
+import portrait from "../../assets/img/portrait.JPG";
 
 import { lightTheme, darkTheme } from "../../theme";
 import "./aboutPage.scss";
