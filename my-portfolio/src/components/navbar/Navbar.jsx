@@ -12,7 +12,12 @@ import { navbarDarkTheme } from "../../theme";
 import "./navbar.scss";
 
 const Navbar = ({ theme }) => {
-  const [isClose, setIsClose] = useState(false);
+  const [isClose, setIsClose] = useState(true);
+  const [page, setPage] = useState("home");
+
+  const handleChangePage = (page) => {
+    setPage(page);
+  };
 
   return (
     <>
@@ -30,16 +35,44 @@ const Navbar = ({ theme }) => {
           <div className="ocupation">Frontend Developer</div>
         </div>
         <div className={theme === "light" ? "center" : "center dark-theme"}>
-          <Link to="/" className="link-item">
+          <Link
+            to="/"
+            className={page === "home" ? "link-item active" : "link-item"}
+            onClick={() => {
+              setIsClose(true);
+              handleChangePage("home");
+            }}
+          >
             Home Page
           </Link>
-          <Link to="/about-me" className="link-item">
+          <Link
+            to="/about-me"
+            className={page === "about" ? "link-item active" : "link-item"}
+            onClick={() => {
+              setIsClose(true);
+              handleChangePage("about");
+            }}
+          >
             About Me
           </Link>
-          <Link to="/project" className="link-item">
+          <Link
+            to="/project"
+            className={page === "project" ? "link-item active" : "link-item"}
+            onClick={() => {
+              setIsClose(true);
+              handleChangePage("project");
+            }}
+          >
             My Project
           </Link>
-          <Link to="/contact-me" className="link-item">
+          <Link
+            to="/contact-me"
+            className={page === "contact" ? "link-item active" : "link-item"}
+            onClick={() => {
+              setIsClose(true);
+              handleChangePage("contact");
+            }}
+          >
             Contact Me
           </Link>
         </div>
@@ -66,13 +99,13 @@ const Navbar = ({ theme }) => {
             >
               <LinkedInIcon className="social-link" />
             </a>
-            <a
+            {/* <a
               href="https://app.netlify.com/teams/xiaoling2000/overview"
               target="_blank"
               rel="noreferrer"
             >
               <span class="iconify social-link" data-icon="bxl:netlify"></span>
-            </a>
+            </a> */}
             <a
               href="https://github.com/linhtat2000"
               target="_blank"

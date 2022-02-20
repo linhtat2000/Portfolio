@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Homepage from "./pages/homepage/Homepage";
@@ -7,6 +7,8 @@ import ProjectPage from "./pages/project-page/ProjectPage";
 import ProjectDetail from "./pages/project-detail-page/ProjectDetail";
 import ContactPage from "./pages/contact-page/ContactPage";
 import Navbar from "./components/navbar/Navbar";
+
+import "./pages/homepage/homepage.scss";
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -27,7 +29,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="homepage">
       <Navbar theme={theme} />
       <Routes>
         <Route

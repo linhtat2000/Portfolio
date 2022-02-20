@@ -30,7 +30,9 @@
   }
 
   @include mobile {
-    margin-left: unset !important;
+    &.main {
+      height: unset;
+    }
 
     .contact-img {
       display: none;

@@ -40,9 +40,9 @@
       font-size: 1.5rem;
       font-weight: 500;
       color: #000;
-      text-decoration: none;
 
-      &:hover {
+      &:hover,
+      &.active {
         color: $primary-clr;
         text-decoration: underline;
       }
@@ -52,7 +52,8 @@
       .link-item {
         color: #f1f5f8;
 
-        &:hover {
+        &:hover,
+        &.active {
           color: $secondary-clr;
         }
       }

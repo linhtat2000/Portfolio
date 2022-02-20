@@ -52,6 +52,10 @@ $transition: all 0.6s ease;
     border-radius: 20px;
     text-transform: unset;
   }
+
+  @include mobile {
+    padding-left: 3.7em;
+  }
 }
 
 a {
