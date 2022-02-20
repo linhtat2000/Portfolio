@@ -26,6 +26,12 @@
 
 .feedback-msg {
   position: absolute;
-  top: 4%;
-  left: 60px;
+  top: 2.4em;
+  left: 4.3em;
+
+  @include mobile {
+    width: 350px;
+    top: 4.6em;
+    left: 2.8em;
+  }
 }

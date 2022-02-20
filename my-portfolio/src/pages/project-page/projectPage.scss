@@ -1,10 +1,7 @@
 @import "../../global.scss";
 
 .project-section {
-  &.main {
-    height: unset;
-    margin-bottom: -5em;
-  }
+  margin-bottom: -16em;
 
   .introduction {
     .text {
@@ -12,7 +9,18 @@
     }
   }
 
+  @include tablet {
+    &.main {
+      height: unset;
+    }
+  }
+
   @include mobile {
+    &.main {
+      height: unset;
+      margin-bottom: -5em;
+    }
+
     .introduction {
       .text {
         width: 100%;

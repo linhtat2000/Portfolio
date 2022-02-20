@@ -22,6 +22,7 @@ const Form = ({ theme }) => {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
+    setOpen(true);
 
     emailjs
       .sendForm(
@@ -99,6 +100,7 @@ const Form = ({ theme }) => {
           name="user_name"
           className="input"
           color="primary"
+          onClick={(e) => (e.target.value = null)}
         />
         <TextField
           fullWidth
@@ -110,6 +112,7 @@ const Form = ({ theme }) => {
           name="user_email"
           className="input"
           color="primary"
+          onClick={(e) => (e.target.value = null)}
         />
         <TextField
           fullWidth
@@ -120,6 +123,7 @@ const Form = ({ theme }) => {
           name="user_phoneNumber"
           className="input"
           color="primary"
+          onClick={(e) => (e.target.value = null)}
         />
         <TextField
           fullWidth
@@ -131,6 +135,7 @@ const Form = ({ theme }) => {
           name="user_subject"
           className="input"
           color="primary"
+          onClick={(e) => (e.target.value = null)}
         />
         <TextField
           fullWidth
@@ -144,6 +149,7 @@ const Form = ({ theme }) => {
           name="message"
           className="input"
           color="primary"
+          onClick={(e) => (e.target.value = null)}
         />
         <Button
           variant="contained"
