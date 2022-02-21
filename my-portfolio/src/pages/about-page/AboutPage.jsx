@@ -1,9 +1,10 @@
-import { ThemeProvider } from "@emotion/react";
-
+import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { ThemeProvider } from "@emotion/react";
+import { init } from "ityped";
+
 import { Button } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-
 import btnTheme from "../../btn-theme";
 import portrait from "../../assets/img/portrait.JPG";
 
@@ -11,12 +12,25 @@ import { lightTheme, darkTheme } from "../../theme";
 import "./aboutPage.scss";
 
 const AboutPage = ({ theme }) => {
+  const textRef = useRef();
+
+  useEffect(() => {
+    init(textRef.current, {
+      showCursor: true,
+      backDelay: 1500,
+      backSpeed: 30,
+      strings: ["Me, myself and I"],
+    });
+  }, []);
+
   return (
     <div
       className="main about-section"
       style={theme === "light" ? lightTheme : darkTheme}
     >
-      <h2 className="header">Me, Myself and I</h2>
+      <h2 className="header">
+        <span ref={textRef}></span>
+      </h2>
       <div className="info">
         <div className="left">
           <p className="text">
@@ -42,7 +56,7 @@ const AboutPage = ({ theme }) => {
               className="custom-btn"
             >
               <Link
-                to="../../../public/files/Tat-Tieu-Linh-Resume.pdf"
+                to="https://github.com/linhtat2000/Portfolio/raw/main/TAT_TIEU_LINH_Resume.pdf"
                 target="_blank"
                 download
                 className="download-file"

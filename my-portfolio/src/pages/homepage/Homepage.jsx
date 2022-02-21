@@ -1,5 +1,7 @@
+import { useEffect, useRef } from "react";
 import { ThemeProvider } from "@mui/material";
 import { Link } from "react-router-dom";
+import { init } from "ityped";
 
 import illustration1 from "../../assets/img/illustration-1.png";
 import illustration2 from "../../assets/img/illustration-2.png";
@@ -18,6 +20,17 @@ import "../../global.scss";
 import "./homepage.scss";
 
 const Homepage = ({ theme, toggleTheme }) => {
+  const textRef = useRef();
+
+  useEffect(() => {
+    init(textRef.current, {
+      showCursor: true,
+      backDelay: 1500,
+      backSpeed: 30,
+      strings: ["My name is Linh"],
+    });
+  }, []);
+
   return (
     <div
       className="homepage"
@@ -34,7 +47,7 @@ const Homepage = ({ theme, toggleTheme }) => {
           <h1 className="header">
             Hello World!
             <br />
-            My name is Linh
+            <span ref={textRef}></span>
           </h1>
           <p className="text">
             I’m a fresher{" "}
