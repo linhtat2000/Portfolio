@@ -78,7 +78,7 @@
         z-index: 1;
 
         .view-icon {
-          font-size: 1.8rem;
+          font-size: 2rem;
           color: #fff;
 
           &:hover {
@@ -108,9 +108,5 @@
 
   @include mobile {
     margin: 1em auto;
-
-    .view-icon {
-      font-size: 2rem !important;
-    }
   }
 }

@@ -1,36 +1,25 @@
-import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react";
-import { init } from "ityped";
-
 import { Button } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import btnTheme from "../../btn-theme";
-import portrait from "../../assets/img/portrait.JPG";
 
 import { lightTheme, darkTheme } from "../../theme";
+import btnTheme from "../../btn-theme";
+
+import portrait from "../../assets/img/portrait.JPG";
+import skillbg from "../../assets/img/skills.svg";
+import ai from "../../assets/img/ai-ball.svg";
+import figma from "../../assets/img/figma-ball.svg";
+import vscode from "../../assets/img/vscode-ball.svg";
 import "./aboutPage.scss";
 
 const AboutPage = ({ theme }) => {
-  const textRef = useRef();
-
-  useEffect(() => {
-    init(textRef.current, {
-      showCursor: true,
-      backDelay: 1500,
-      backSpeed: 30,
-      strings: ["Me, myself and I"],
-    });
-  }, []);
-
   return (
     <div
       className="main about-section"
       style={theme === "light" ? lightTheme : darkTheme}
     >
-      <h2 className="header">
-        <span ref={textRef}></span>
-      </h2>
+      <h2 className="header">Me, myself and I</h2>
       <div className="info">
         <div className="left">
           <p className="text">
@@ -69,6 +58,18 @@ const AboutPage = ({ theme }) => {
         </div>
         <div className="right">
           <img src={portrait} alt="Linh's portrait" className="portrait" />
+        </div>
+      </div>
+      <div className="skill-set">
+        <img src={skillbg} alt="my skill set" className="skill-bg" />
+        <div className="skills">
+          <img src={ai} alt="be able to use Illustrator" className="skill ai" />
+          <img
+            src={vscode}
+            alt="be able to use VSCode"
+            className="skill vscode"
+          />
+          <img src={figma} alt="be able to use Figma" className="skill figma" />
         </div>
       </div>
     </div>
